@@ -1,0 +1,178 @@
+@import 'reset.css';
+@import 'base.css';
+@import 'modules.css';
+@import 'layout.css';
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    background: rgb(124, 119, 119);
+    font-size: 2rem;
+    color: white;
+}
+
+
+
+/* landing page */
+.container {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+}
+.header {
+    width:100%;
+    background-color: rgb(0, 0, 0);
+    padding: 1.8rem;
+}
+.header .container {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+} 
+.header .container h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-left: 0.8rem;
+}
+.header .container .menu-icon i {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: 0.8rem;
+}
+
+
+/* main */
+.main {
+    width: 100%;
+    /* height: 85vh; */
+    background-color: rgb(48, 38, 38);
+}
+.main .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    font-size: 1.5rem;
+    background-color: rgb(48, 38, 38);
+}
+.main .container a {
+    text-decoration: none;
+    margin: 0.8rem 0;
+}
+.main .container a:hover {
+    color: rgb(126, 107, 107);
+}
+/* main head for book-cards*/
+.main .book-cards .books-data {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-size: rem;
+    padding: 1.8rem;
+}
+.main .book-cards .books-data h3 span {
+    font-size: 1.8rem;
+    color: rgb(241, 64, 10);
+}
+/* main cards */
+
+
+
+/* footer */
+.footer {
+    padding: 1.8rem;
+    background-color: black;
+}
+.footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/* searches new page style (form-page) */
+.main h3 {
+    color: rgb(221, 107, 107);
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+/*  */
+.new__form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    padding: 30px;
+}
+  
+.new__form .text__input {
+    padding: 15px 5px;
+    color: black;
+    font-size: 1.2rem;
+}
+.button-text {
+    font-size: 1.2rem;
+}
+  
+.radio__label {
+    margin: 15px 0px;
+    padding: 15px 5px;
+    background-color: rgb(73, 67, 67);
+}
+  
+.new__form input[type="submit"] {
+    display: block;
+    margin: 15px 0px;
+    padding: 18px 5px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border: none;
+}
+
+
+/*  show page */
+.bg {
+    padding:2rem;
+}
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(1 ,1fr);
+    gap: 0.8rem;
+    margin: 0.5 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.container2 .book-object {
+    max-width: 30rem;
+    height: fit-content;
+    background-color: rgb(118, 129, 120);
+    margin: 2rem auto;
+    border: 2px solid rgb(253, 153, 153);
+}
+.container2 .book-object img{
+    width: 100%;
+    height: 150px;
+}
+.container2 .book-object h2{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    color: rgb(255, 255, 255);
+}
+
+.container2 .book-object p{
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+}
