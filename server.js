@@ -67,7 +67,7 @@ function Book (booksData) {
   this.title = (booksData.volumeInfo.title) ? booksData.volumeInfo.title : 'No Match';
 
   // there is more than one auther so i have to join them and can be no auters founds
-  this.authers = (booksData.volumeInfo.authers)? booksData.volumeInfo.authers.join(' , ') : 'No Authers Found';
+  this.authers = (booksData.volumeInfo.authers) ? booksData.volumeInfo.authers.join(' , ') : 'No Authers Found';
 
   // if there is descripthion or not
   this.description = (booksData.volumeInfo.description) ? booksData.volumeInfo.description : 'No Description Found';
@@ -77,13 +77,21 @@ function Book (booksData) {
   this.image = (booksData.volumeInfo.imageLinks) ? booksData.volumeInfo.imageLinks.thumbnail : `https://i.imgur.com/J5LVHEL.jpg`;
 }
 
+////////////////////////////////💨💨💨💨  add book to database  💨💨💨💨 ////////////////////////////////
+// http://localhost:4401/addtodatabase
+server.get('/addbook' , addbookHandler);
+function addbookHandler (req,res) {
+  res.send('in progress');
+}
+
+
 ////////////////////////////////////💨💨💨💨  hello route  💨💨💨💨 ///////////////////////////////////
 //  home page route handing => http://localhost:4000/hello
 server.get('/hello', (req, res) => {
   // res.send('home route');
   res.render('./pages/index');
 });
-////////////////////////////////////💨💨💨💨  conniction  💨💨💨💨 ///////////////////////////////////
+////////////////////////////////////💨💨💨💨  connection  💨💨💨💨 ///////////////////////////////////
 // connect to port
 server.listen(PORT , ()=>{
   console.log(`CONNECT TO PORT : ${PORT}`);
